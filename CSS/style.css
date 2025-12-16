@@ -8,14 +8,16 @@ body{
 a{
     text-decoration: none;
     color: #fff;
-    padding: 10px 15px;
+    padding: 1em 1em;
     display: inline-block;
+    font-size: 2em;
 }
 
 a:hover {
     background-color: #b29784;
     /*6b7460*/
-    font-size: 1.05em;
+    font-size: 2.05em;
+    transition: all 0.1s ease;
 }
 
 #menu-bar{
@@ -24,5 +26,36 @@ a:hover {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    height: 2.5em;
+    height: 6.5em;
+    width: 100%;
+    /* position: fixed; */
+}
+
+.hero-image{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.text-overlay{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: #6b7460;
+    font-size: 307%;
+    font-weight: bold;
+    text-shadow: 6px 0px 4px rgba(0, 0, 0, 0.7);
+    text-align: left;
+
+}
+
+.text-overlay p{
+    position: absolute;
+    text-align: left;
+    top: 90%;
+    left: 0%;
+    width: 75%;
 }
