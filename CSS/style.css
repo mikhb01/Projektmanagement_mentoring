@@ -4,3 +4,25 @@ body{
     padding: 0;
     background-color: #f4f4f4;
 }
+
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #b29784;
+    /*6b7460*/
+    font-size: 1.05em;
+}
+
+#menu-bar{
+    background-color: #6b7460;
+    /*b29784*/
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    height: 2.5em;
+}
