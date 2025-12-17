@@ -39,7 +39,7 @@ a:hover {
     overflow: hidden;
 }
 
-.text-overlay{
+#text-overlay{
     position: absolute;
     top: 50%;
     left: 35%;
@@ -58,4 +58,15 @@ a:hover {
     top: 90%;
     left: 0%;
     width: 75%;
+}
+
+.main-content {
+    background-color: #f4f4f4;
+}
+
+.main-content h2 {
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+    padding-top: 12.5%;
 }
