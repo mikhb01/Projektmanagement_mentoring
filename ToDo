@@ -2,16 +2,18 @@ Werde mein bestes geben, mich diese Woche noch damit (↓) auseinander zu setzen
 
 Website: 
 tinder style
-⁠how our mentoring program works
+⁠how our mentoring program works ✅
+    --included in base page
 ⁠“staff“/mentors
 ⁠CV checklist
 ⁠Get help
 ⁠profile page
-⁠algorithm for sorting
-⁠choose from a few options in the end after sorting out
-⁠German(&/english???)
+    ⁠algorithm for sorting
+    ⁠choose from a few options in the end after sorting out
+English / maybe german possible in the end
 ⁠Login/registration page (mentors & mentees)
-⁠what we do
+    -- basic register und login functionality is implemented
+⁠what we do 
 ⁠schedule a meeting (with email reply)
 ⁠Uni sso login / email registration for students only (?) [dass muss ich wahrscheinlich erstmal skippen]
 ⁠get help
