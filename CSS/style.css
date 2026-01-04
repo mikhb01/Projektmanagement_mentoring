@@ -14,6 +14,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    justify-content: center;
 }
 
 a {
@@ -131,4 +132,204 @@ button:hover{
 footer {
     background-color: #6b7460;
     font-size: large;
+}
+
+#mentorBoxes {
+    margin-top: 10%;
+}
+
+/* Container für alle Boxen */
+.boxes {
+    display: flex;
+    flex-wrap: wrap; /* Zeilenumbruch bei kleinen Bildschirmen */
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Die einzelne Box */
+.box {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden; /* Damit das Bild oben die Ecken nicht überlagert */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px; /* Feste Breite pro Box */
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Kleiner Hover-Effekt */
+}
+
+/* Stil für die Bilder */
+.box img {
+    width: 100%;
+    max-height: fit-content;
+    object-fit: cover; /* Bild wird passend zugeschnitten statt verzerrt */
+}
+
+/* Textbereich in der Box */
+.box-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.box-content h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+.box-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Tinder Anpassungen */
+.swipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px; /* Gibt Tiefe für die Drehung beim Swipen */
+}
+
+.card-stack {
+    position: relative;
+    width: 320px;
+    height: 450px;
+}
+
+.swipe-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    cursor: grab;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    user-select: none; /* Verhindert Textmarkierung beim Ziehen */
+}
+
+.swipe-card img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    pointer-events: none; /* Verhindert Bild-Dragging vom Browser */
+}
+
+.card-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Button Styling */
+.swipe-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.round-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.red { background: #ff4d4d; }
+.green { background: #2ecc71; }
+
+/* Login/Register Seite */
+/* Grundstyling */
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+} */
+
+/* Die Login/Register Box */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Formular Elemente */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2ecc71;
+}
+
+/* Buttons */
+.register-button {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Primärer Button (Login/Register) */
+button[type="submit"]:first-of-type {
+    background-color: #2ecc71;
+    color: white;
+}
+
+button[type="submit"]:first-of-type:hover {
+    background-color: #27ae60;
+}
+
+/* Sekundäre Buttons (Reset/Switch) */
+button[type="button"], 
+.register-button:not(:first-of-type) {
+    background-color: transparent;
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+.register-button:active {
+    transform: scale(0.98);
 }

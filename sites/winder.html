@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+<body>
+    <div id="content">
+        <nav>
+            <div class="menu" id="menu-bar">
+                <a href="../index.html">Home</a>
+                <a href="staff.html">Staff</a>
+                <!-- <a href="winder.html">Winder here</a> -->
+            </div>
+        </nav>
+        <section id="mentorBoxes" class="swipe-container">
+            <div class="card-stack">
+                <div class="swipe-card" data-mentor="sarah">
+                    <img src="../graphics/mentor_1_transparent.png" alt="Sarah">
+                    <div class="card-info">
+                        <h3>Sarah Schmidt</h3>
+                        <p>Agile Coach & Scrum Master</p>
+                    </div>
+                </div>
+                <div class="swipe-card" data-mentor="michael">
+                    <img src="../graphics/mentor_2_transparent.png" alt="Michael">
+                    <div class="card-info">
+                        <h3>Michael Müller</h3>
+                        <p>Risk Management Expert</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swipe-buttons">
+                <button id="dislike" class="round-btn red">✖</button>
+                <button id="like" class="round-btn green">✔</button>
+            </div>
+        </section>
+    </div>
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>
