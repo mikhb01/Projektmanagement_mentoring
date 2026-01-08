@@ -10,12 +10,18 @@
 body {
     font-family: "Smooch Sans", Arial, sans-serif;
     background-color: #f4f7f6;
-    display: block;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     min-height: 100vh;
     margin: 0;
     min-width: 100%;
+}
+
+.box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Die Login/Register Box */
