@@ -22,6 +22,19 @@ a {
     color: #000;
 }
 
+header{
+    position: relative;
+    margin: 0 auto;
+    height: 7.5em;
+}
+
+nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
 nav a{
     text-decoration: none;
     color: #fff;
@@ -45,37 +58,49 @@ nav a:hover {
     text-align: center;
     height: 6.5em;
     width: 100%;
-    position: relative;
+    position: absolute;
     text-transform: capitalize;
+    /* margin-bottom: 10%; */
+    bottom: 0;
 }
 
+.hero-section {
+    position: relative;
+}
+
+.hero-section h1{
+    position: absolute;
+    font-size: clamp(20px, 8vw, 10vw);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    max-width: 60%;
+    color: #6b7460;
+}
+
+.hero-section p{
+    position: absolute;
+    font-size: clamp(10px, 4vw, 6vw);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    max-width: 40%;
+    color: #6b7460;
+    margin-top: 25%;
+}
 .hero-image{
     width: 100%;
     height: 50%;
     position: relative;
-    display: inline-block;
+    display: block;
     overflow: hidden;
 }
 
-#text-overlay{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    color: #6b7460;
-    font-size: 400%;
-    font-weight: bold;
-    text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.7);
-    text-align: left;
-
-}
-
-.text-overlay p{
-    position: absolute;
-    text-align: left;
-    top: 90%;
-    left: 0%;
-    width: 75%;
+#hero-banner {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
 }
 
 .main-content {
@@ -99,7 +124,7 @@ nav a:hover {
     left: 10%;
 }
 
-button {
+.buttonStuff button{
     border-radius: 300px;
     height: 10%;
     padding-left: 1%;
@@ -112,7 +137,7 @@ button {
     font-size: 150%;
 }
 
-button:hover{
+.buttonStuff button:hover{
     cursor: pointer;
     background: grey;
 }
@@ -184,152 +209,4 @@ footer {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.4;
-}
-
-/* Tinder Anpassungen */
-.swipe-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    perspective: 1000px; /* Gibt Tiefe für die Drehung beim Swipen */
-}
-
-.card-stack {
-    position: relative;
-    width: 320px;
-    height: 450px;
-}
-
-.swipe-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    overflow: hidden;
-    cursor: grab;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    user-select: none; /* Verhindert Textmarkierung beim Ziehen */
-}
-
-.swipe-card img {
-    width: 100%;
-    height: 75%;
-    object-fit: cover;
-    pointer-events: none; /* Verhindert Bild-Dragging vom Browser */
-}
-
-.card-info {
-    padding: 15px;
-    text-align: center;
-}
-
-/* Button Styling */
-.swipe-buttons {
-    margin-top: 20px;
-    display: flex;
-    gap: 30px;
-}
-
-.round-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-.red { background: #ff4d4d; }
-.green { background: #2ecc71; }
-
-/* Login/Register Seite */
-/* Grundstyling */
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-} */
-
-/* Die Login/Register Box */
-.login-box {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-.login-box h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-/* Formular Elemente */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-input {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-input:focus {
-    outline: none;
-    border-color: #2ecc71;
-}
-
-/* Buttons */
-.register-button {
-    padding: 12px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.1s;
-}
-
-/* Primärer Button (Login/Register) */
-button[type="submit"]:first-of-type {
-    background-color: #2ecc71;
-    color: white;
-}
-
-button[type="submit"]:first-of-type:hover {
-    background-color: #27ae60;
-}
-
-/* Sekundäre Buttons (Reset/Switch) */
-button[type="button"], 
-.register-button:not(:first-of-type) {
-    background-color: transparent;
-    color: #666;
-    font-size: 0.85rem;
-    text-decoration: underline;
-}
-
-.register-button:active {
-    transform: scale(0.98);
 }
