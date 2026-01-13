@@ -23,7 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
 
+    if (window.location.pathname.endsWith('index.html')) {
     document.addEventListener('click', (event) => {
+        const mentorCard = event.target.closest('.box');
+        if (mentorCard) {
+            const mentorId = mentorCard.id;
+            if (mentorId === 'mentor1') {
+                window.location.href = "sites/mentors/mentorSchmidtS.html";
+            } else if (mentorId === 'mentor2') {
+                alert("Du hast Michael Müller ausgewählt!");
+            } else if (mentorId === 'mentor3') {
+                alert("Du hast Julia Weber ausgewählt!");
+            }
+        }
+    });
+    } else {
+        document.addEventListener('click', (event) => {
         const mentorCard = event.target.closest('.box');
         if (mentorCard) {
             const mentorId = mentorCard.id;
@@ -36,4 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+    }
 });
