@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
 if (currentUser) {
-    console.log("Eingeloggter Nutzer:", currentUser.username);
+    console.log("Signed In User:", currentUser.username);
     // Hier könntest du z.B. das Menü ändern:
     // document.getElementById('menu-bar').innerHTML += `<span>Hallo, ${currentUser.username}</span>`;
 }
@@ -36,7 +36,7 @@ if (currentUser) {
 
         likeBtn.addEventListener('click', () => swipe('right'));
         dislikeBtn.addEventListener('click', () => swipe('left'));
-        console.log("Swiping-Logik geladen.");
+        console.log("Swiping-Logic loaded.");
     }
 
     // --- REGISTER LOGIK ---
@@ -45,7 +45,7 @@ if (currentUser) {
         registerForm.addEventListener('submit', function(e) {
             e.preventDefault(); 
             
-            console.log("Registrierung gestartet...");
+            console.log("Registration started...");
 
             const user = document.getElementById('username').value;
             const mail = document.getElementById('email').value;
@@ -53,7 +53,7 @@ if (currentUser) {
             const pass = document.getElementById('password').value;
 
             if (mail !== mailConf) {
-                alert("E-Mails stimmen nicht überein!");
+                alert("E-Mails are not the same!");
                 return;
             }
 
@@ -70,11 +70,11 @@ if (currentUser) {
 
             try {
                 localStorage.setItem('users', JSON.stringify(users));
-                console.log("Gespeichert!", newUser);
-                alert("Registrierung erfolgreich!");
+                console.log("Saved!", newUser);
+                alert("Registration successful!");
                 window.location.href = 'login.html';
             } catch (error) {
-                console.error("Speicherfehler:", error);
+                console.error("Error:", error);
             }
         });
     }
@@ -87,7 +87,7 @@ if (currentUser) {
             const usernameInput = document.getElementById('username').value;
             const passwordInput = document.getElementById('password').value;
 
-            console.log("Login-Versuch für:", usernameInput);
+            console.log("Login try:", usernameInput);
 
             // 1. Nutzerdaten aus dem LocalStorage abrufen
             const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
@@ -98,18 +98,18 @@ if (currentUser) {
             );
 
             if (userFound) {
-                console.log("Login erfolgreich!");
+                console.log("Login successful!");
                 
                 // 3. Den aktuell eingeloggten Nutzer speichern (für die Startseite)
                 localStorage.setItem('currentUser', JSON.stringify(userFound));
                 
-                alert("Willkommen zurück, " + userFound.username + "!");
+                alert("Welcome back, " + userFound.username + "!");
                 
                 // Weiterleitung zur Startseite (Pfad anpassen falls nötig)
                 window.location.href = '../index.html'; 
             } else {
-                console.warn("Login fehlgeschlagen: Nutzer nicht gefunden oder Passwort falsch.");
-                alert("Benutzername oder Passwort inkorrekt!");
+                console.warn("Login failed: User not found or wrong password.");
+                alert("Username or password incorrect!");
             }
         });
     }
