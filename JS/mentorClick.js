@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
 
-    if (window.location.pathname.endsWith('index.html')) {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('Projektmanagement_mentoring/')) {
     document.addEventListener('click', (event) => {
         const mentorCard = event.target.closest('.box');
         if (mentorCard) {
