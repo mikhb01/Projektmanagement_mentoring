@@ -51,11 +51,20 @@ if (currentUser) {
             const mail = document.getElementById('email').value;
             const mailConf = document.getElementById('email-Confirm').value;
             const pass = document.getElementById('password').value;
+            const validEndingsRegex = /@stud.hs-bremen.de$/g;
+            const found = mail.match(validEndingsRegex);
+
+            if (!found) {
+                alert("Please use your university email (@stud.hs-bremen.de)!");
+                return;
+            }
 
             if (mail !== mailConf) {
                 alert("E-Mails are not the same!");
                 return;
             }
+
+            
 
             let users = JSON.parse(localStorage.getItem('users')) || [];
             
