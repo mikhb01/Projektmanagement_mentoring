@@ -19,34 +19,47 @@
                     <a href="winder.html">Winder here</a>
                 </div>
                 <div class="buttonStuffNav">
-                    <a href="login.html">Login here</a>
+                    <a id="login-link"href="login.html">Login</a>
+                    <a id="logout-link" href="../index.html">Logout</a>
                 </div>
             </div>
         </nav>
         </header>
         <section id="mentorBoxes" class="swipe-container">
             <div class="card-stack">
-                <div class="swipe-card" data-mentor="sarah">
+                <div class="swipe-card" data-mentor="schmidtS">
                     <img src="../graphics/mentor_1_transparent.png" alt="Sarah">
                     <div class="card-info">
                         <h3>Sarah Schmidt</h3>
                         <p>Agile Coach & Scrum Master</p>
                     </div>
                 </div>
-                <div class="swipe-card" data-mentor="michael">
+                <div class="swipe-card" data-mentor="MuellerM">
                     <img src="../graphics/mentor_2_transparent.png" alt="Michael">
                     <div class="card-info">
                         <h3>Michael Müller</h3>
                         <p>Risk Management Expert</p>
                     </div>
                 </div>
+                <div class="swipe-card" data-mentor="WeberJ">
+                    <img src="../graphics/mentor_3_transparent.png" alt="Julia">
+                    <div class="card-info">
+                        <h3>Julia Weber</h3>
+                        <p>Soft Skills</p>
+                    </div>
+                </div>
             </div>
-            
             <div class="swipe-buttons">
                 <button id="dislike" class="round-btn red">✖</button>
                 <button id="like" class="round-btn green">✔</button>
             </div>
         </section>
+        <div id="result">
+            <h2> No one left</h2>
+            <p>You have swiped through all available mentors.<br>
+            <a href="contact.html">Contact</a> us and we will help you find the right one!</p>
+            <button type="button" onclick="location.reload()">Restart</button>
+        </div>
     </div>
     <script src="../JS/scripts.js"></script>
 </body>

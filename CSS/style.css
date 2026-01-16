@@ -17,10 +17,10 @@ body{
     justify-content: center;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: #000;
-}
+} */
 
 header{
     position: relative;
@@ -38,7 +38,7 @@ nav{
 nav a{
     text-decoration: none;
     color: #fff;
-    padding: 1em 1em;
+    padding: 1vw 1vw;
     display: inline-block;
     font-size: 1.6vw;
 }
@@ -46,7 +46,7 @@ nav a{
 nav a:hover {
     background-color: #b29784;
     /*6b7460*/
-    font-size: 2.0009em;
+    font-size: 1.7vw;
     transition: all 0.1s ease;
 }
 
@@ -159,6 +159,10 @@ nav a:hover {
     max-height: fit-content;
 }
 
+button a{
+    text-decoration: none;
+    color: #000;
+}
 .menu-content {
     width: 80vw;
     margin-left: 0 auto;
@@ -224,4 +228,24 @@ footer {
     font-size: 0.95rem;
     color: #555;
     line-height: 1.4;
+}
+
+#logout-link {
+    display: none;
+}
+
+.textBox {
+    width: 100vw;
+    text-align: center;
+}
+
+.textBox h2 {
+    font-size: 250%;
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.textBox a {
+    text-decoration: underline;
 }

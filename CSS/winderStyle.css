@@ -54,6 +54,36 @@
     color: white;
 }
 
-.red { background: #ff4d4d; }
-.green { background: #2ecc71; }
+.red { 
+    background: #ff4d4d; 
+}
 
+.green { 
+    background: #2ecc71; 
+}
+
+#result {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#result p {
+    font-size: 1.6em;
+    color: #555;
+}
+
+#result a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#result a:hover {
+    color: #555555;
+    font-size: 1.01em;
+}
