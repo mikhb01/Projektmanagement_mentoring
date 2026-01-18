@@ -9,85 +9,102 @@
   font-style: normal;
 }
 
+/* Body and header stuff */
 body {
   font-family: "Smooch Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  justify-content: center;
+  line-height: 1.5;
 }
-
-/* a {
-    text-decoration: none;
-    color: #000;
-} */
 
 header {
   position: relative;
-  margin: 0 auto;
-  height: 7.5em;
+  width: 100%;
+  min-height: 120px;
+}
+
+footer {
+  background-color: #6b7460;
+  font-size: large;
+}
+
+
+#menu-bar {
+  background-color: #6b7460;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+  padding: 10px 0;
+  text-transform: capitalize;
 }
 
 nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 15px;
   width: 100%;
+  margin: 0 auto;
 }
 
 nav a {
   text-decoration: none;
   color: #fff;
-  padding: 1vw 1vw;
-  display: inline-block;
-  font-size: 1.6vw;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
 }
 
 nav a:hover {
   background-color: #b29784;
-  /*6b7460*/
-  font-size: 1.7vw;
-  transition: all 0.1s ease;
+  transform: scale(1.05);
 }
 
-#menu-bar {
-  background-color: #6b7460;
-  /*b29784*/
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  height: 11vh;
-  width: 100%;
-  position: absolute;
-  text-transform: capitalize;
-  /* margin-bottom: 10%; */
-  bottom: 0;
-}
+/* Hero Section */
 
 .hero-section {
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
+
+#hero-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px; 
+}
+
 
 .hero-section h1 {
   position: absolute;
-  font-size: clamp(20px, 8vw, 10vw);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
   left: 5%;
-  max-width: 60%;
+  margin: 0;
+  font-size: clamp(2rem, 8vw, 5rem); 
   color: #6b7460;
+  line-height: 1.1;
+  max-width: 80%;
+  z-index: 2;
 }
 
 .hero-section p {
   position: absolute;
-  font-size: clamp(10px, 4vw, 6vw);
-  top: 50%;
-  transform: translateY(-50%);
+  top: 55%;
   left: 5%;
-  max-width: 40%;
+  font-size: clamp(1rem, 4vw, 2rem);
   color: #6b7460;
-  margin-top: 25%;
+  max-width: 60%;
+  z-index: 2;
 }
+
 .hero-image {
   width: 100%;
   height: 50%;
@@ -96,57 +113,51 @@ nav a:hover {
   overflow: hidden;
 }
 
-#hero-banner {
-  width: 100%;
-  height: auto;
-  position: relative;
-  display: block;
-}
+/* Main Content */
 
 .main-content {
+  padding: 40px 5%;
   background-color: #f4f4f4;
+  max-width: 1200px; 
 }
 
 .main-content h2 {
-  font-size: 290%;
-  position: relative;
+  font-size: clamp(1.8rem, 5vw, 3rem);
   text-align: center;
-  padding-top: 12.5%;
+  margin-bottom: 20px;
 }
 
 .main-content p {
-  font-size: 250%;
-  padding-top: 10%;
-  width: 50%;
-  text-align: left;
-  position: relative;
-  display: block;
-  left: 10%;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+/* Button Styles */
+
+.buttonStuff {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 .buttonStuff button {
-  border-radius: 300px;
-  height: 10%;
-  padding-left: 1%;
-  padding-right: 1%;
-  margin: 10px 0;
-  overflow-wrap: break-word;
-  size: 50%;
-  text-align: center;
-  display: inline-block;
-  font-size: 150%;
-}
-
-.buttonStuff button:hover {
+  border-radius: 50px;
+  padding: 12px 30px;
+  border: none;
+  background-color: #6b7460;
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
-  background: grey;
+  transition: 0.3s;
 }
 
-.buttonStuff {
-  width: fit-content;
-  display: inline-block;
-  margin-left: 30%;
-  margin-top: 2.5%;
+.buttonStuff button a {
+    color: white;
 }
 
 .buttonStuffNav {
@@ -163,112 +174,96 @@ button a {
   text-decoration: none;
   color: #000;
 }
+
+
 .menu-content {
   width: 80vw;
   margin-left: 0 auto;
   display: inline-flex;
 }
 
-.boxes {
-  background-color: #6b7460;
-}
-
-footer {
-  background-color: #6b7460;
-  font-size: large;
-}
+/* Mentor Styles */
 
 #mentorBoxes {
-  margin-top: 10%;
+  margin-top: 50px; /* Von % auf px für konsistentere Abstände */
 }
 
-/* Container für alle Boxen */
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
+  gap: 30px;
+  padding: 40px 5%;
+  background-color: #6b7460;
 }
 
-/* Die einzelne Box */
 .box {
   background: #f9f9f9;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Feste Breite pro Box */
+  width: 100%; 
+  max-width: 320px; /* Verhindert, dass Boxen zu riesig werden */
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
-/* Stil für die Bilder */
 .box img {
   width: 100%;
-  max-height: fit-content;
+  height: fit-content; /* Feste Höhe für einheitliche Optik */
   object-fit: cover;
 }
 
-/* Textbereich in der Box */
 .box-content {
   padding: 20px;
   text-align: center;
-}
-
-.box-content h3 {
-  margin: 0 0 10px 0;
-  font-family: "Smooch Sans", sans-serif;
-  font-size: 1.5rem;
-}
-
-.box-content p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.4;
+  flex-grow: 1; /* Sorgt dafür, dass Boxen gleich hoch sind */
 }
 
 #logout-link {
   display: none;
 }
 
+/* Text Box Styles */
+
 .textBox {
-  width: 100vw;
+  width: 90%;
+  /* max-width: 1000px; */
+  margin: 0 auto;
   text-align: center;
 }
 
 .textBox h2 {
-  font-size: 250%;
-  position: relative;
-  text-align: center;
-  padding-top: 5%;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  padding-top: 40px;
+  color: #6b7460;
 }
 
-.textBox a {
-  text-decoration: underline;
-}
-
-/* Spezifische Styles für das Formular, passend zu deinem Design */
+/* Form design */
 .form-container {
-  max-width: 600px;
-  margin: 5% auto;
+  width: 90%;
+  max-width: 650px;
+  margin: 40px auto;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: clamp(20px, 5%, 40px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 label {
-  display: block;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
   color: #6b7460;
+  font-weight: 600;
 }
 
 input[type="text"],
@@ -277,28 +272,35 @@ input[type="number"],
 select,
 textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-family: "Smooch Sans", sans-serif;
-  font-size: 1.2rem;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1.1rem;
   box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #b29784;
 }
 
 .submit-btn {
   background-color: #6b7460;
   color: white;
   border: none;
-  padding: 15px 30px;
-  font-size: 1.5rem;
-  border-radius: 300px;
+  padding: 18px;
+  font-size: 1.4rem;
+  border-radius: 50px;
   cursor: pointer;
   width: 100%;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
   background-color: #b29784;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .success-msg {
@@ -309,36 +311,37 @@ textarea {
   margin-top: 20px;
 }
 
+
+/* Admin Styles */
+
 .admin-container {
-  width: 90%;
+  width: 100%;
+  /* max-width: 1100px; */
   margin: 50px auto;
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Wichtig für Mobile! */
 }
 
 table {
   width: 100%;
+  min-width: 600px; /* Erzwingt Scrollen auf Handys statt Quetschen */
   border-collapse: collapse;
-  margin-top: 20px;
-  font-family: Arial, sans-serif; /* Für bessere Lesbarkeit in Tabellen */
 }
 
 th {
   background-color: #6b7460;
   color: white;
-  padding: 12px;
-  text-align: left;
-  font-family: "Smooch Sans", sans-serif;
-  font-size: 1.5rem;
+  padding: 15px;
+  font-size: 1.2rem;
 }
 
 td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  font-size: 0.9rem;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 1rem;
 }
 
 tr:hover {
@@ -373,58 +376,185 @@ tr:hover {
 }
 
 .checklist-container {
-            max-width: 600px;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .check-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+.check-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
 
-        .check-item:hover {
-            background-color: #f9f9f9;
-        }
+.check-item:hover {
+  background-color: #f9f9f9;
+}
 
-        .check-item input[type="checkbox"] {
-            width: 25px;
-            height: 25px;
-            margin-right: 15px;
-            cursor: pointer;
-            accent-color: #6b7460;
-        }
+.check-item input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  accent-color: #6b7460;
+}
 
-        .check-item label {
-            font-size: 1.4rem;
-            cursor: pointer;
-            color: #333;
-            flex-grow: 1;
-        }
+.check-item label {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #333;
+  flex-grow: 1;
+}
 
-        .check-item input:checked + label {
-            text-decoration: line-through;
-            color: #888;
-        }
+.check-item input:checked + label {
+  text-decoration: line-through;
+  color: #888;
+}
 
-        .progress-container {
-            margin-bottom: 20px;
-            background: #eee;
-            border-radius: 10px;
-            height: 10px;
-        }
+.progress-container {
+  margin-bottom: 20px;
+  background: #eee;
+  border-radius: 10px;
+  height: 10px;
+}
 
-        #progress-bar {
-            background: #6b7460;
-            height: 100%;
-            width: 0%;
-            border-radius: 10px;
-            transition: width 0.3s ease;
-        }
+#progress-bar {
+  background: #6b7460;
+  height: 100%;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+
+
+/* --- RESPONSIVE DESIGN ERGÄNZUNGEN --- */
+
+@media screen and (max-width: 768px) {
+  /* Header & Navigation */
+  header {
+    height: auto;
+  }
+
+  #menu-bar {
+    position: relative;
+    height: auto;
+    padding: 15px 0;
+  }
+
+  nav {
+    position: static;
+    display: flex;
+    flex-direction: column; /* Menüpunkte untereinander */
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 1.2rem; /* Bessere Lesbarkeit am Handy */
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  /* Hero Section */
+  .hero-section h1 {
+    font-size: 12vw; /* Größer auf kleinen Screens */
+    position: relative;
+    top: 0;
+    transform: none;
+    left: 0;
+    max-width: 90%;
+    padding: 20px 5%;
+  }
+
+  .hero-section p {
+    position: relative;
+    font-size: 6vw;
+    top: 0;
+    transform: none;
+    left: 5%;
+    max-width: 90%;
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  /* Main Content */
+  .main-content h2,
+  .textBox h2 {
+    font-size: 200%;
+    padding-top: 20px;
+  }
+
+  .main-content p {
+    font-size: 1.2rem;
+    width: 80%;
+    left: 10%;
+    padding-top: 20px;
+  }
+
+  /* Buttons */
+  .buttonStuff {
+    margin-left: 10%;
+    display: block;
+    width: 80%;
+  }
+
+  .buttonStuff button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* Mentor Boxen */
+  .boxes {
+    flex-direction: column; /* Boxen untereinander stapeln */
+    align-items: center;
+    padding: 20px;
+  }
+
+  .box {
+    width: 100%; /* Boxen nutzen volle Breite */
+    max-width: 350px;
+  }
+
+  /* Formulare */
+  .form-container {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  /* Admin Tabelle */
+  .admin-container {
+    width: 95%;
+    padding: 10px;
+    overflow-x: auto; /* Erlaubt horizontales Scrollen bei breiten Tabellen */
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  /* Checklist */
+  .checklist-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .check-item label {
+    font-size: 1.1rem;
+  }
+}
