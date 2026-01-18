@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin-Corner</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="../JS/scripts.js"></script>
+    <script src="../JS/admin.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu" id="menu-bar">
+          <div class="menu-content">
+            <a href="../index.html">Home</a>
+            <a href="staff.html">Staff</a>
+            <a id="winder-link" href="winder.html">Winder here</a>
+            <a id="form-link" href="form.html">Questionaire</a>
+            <a id="admin-corner" href="admin.html">Admin Corner</a>
+          </div>
+          <div class="buttonStuffNav">
+            <a id="login-link" href="login.html">Login</a>
+            <a id="logout-link" href="../index.html">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <div class="textBox">
+        <h2>Answers</h2>
+      </div>
+
+      <div class="admin-container">
+        <div class="stats-bar" id="stats">Loading...</div>
+
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>User (Account)</th>
+              <th>Name</th>
+              <th>E-Mail</th>
+              <th>Age</th>
+              <th>Occupation</th>
+              <th>Interest 1</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

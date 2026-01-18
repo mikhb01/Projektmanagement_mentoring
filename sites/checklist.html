@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checklist</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="../JS/scripts.js"></script>
+    <script src="../JS/cv-checklist.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu" id="menu-bar">
+          <div class="menu-content">
+            <a href="../index.html">Home</a>
+            <a href="staff.html">Staff</a>
+            <a id="winder-link" href="winder.html">Winder here</a>
+            <a id="form-link" href="form.html">Questionaire</a>
+            <a id="admin-corner" href="admin.html">Admin Corner</a>
+          </div>
+          <div class="buttonStuffNav">
+            <a id="login-link" href="login.html">Login</a>
+            <a id="logout-link" href="../index.html">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="main-content">
+      <div class="textBox">
+        <h2>Dein perfekter Lebenslauf</h2>
+        <p
+          style="
+            font-size: 1.2rem;
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+          "
+        >
+          Hake ab, was du bereits erledigt hast.
+        </p>
+      </div>
+
+      <div class="checklist-container">
+        <div class="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+
+        <div id="checklist">
+          <div class="check-item">
+            <input type="checkbox" id="item1" class="cv-check" />
+            <label for="item1">Persönliche Daten (Name, E-Mail, Tel.)</label>
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item2" class="cv-check" />
+            <label for="item2">Professionelles Bewerbungsfoto</label>
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item3" class="cv-check" />
+            <label for="item3"
+              >Strukturierte Arbeitserfahrung (Anti-chronologisch)</label
+            >
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item4" class="cv-check" />
+            <label for="item4">Bildungsweg (Schule, Studium)</label>
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item5" class="cv-check" />
+            <label for="item5">Besondere Kenntnisse (IT, Sprachen)</label>
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item6" class="cv-check" />
+            <label for="item6">Layout als PDF gespeichert</label>
+          </div>
+          <div class="check-item">
+            <input type="checkbox" id="item7" class="cv-check" />
+            <label for="item7">Rechtschreibprüfung durchgeführt</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

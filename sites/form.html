@@ -5,16 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Questionaire</title>
     <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="../JS/scripts.js"></script>
 </head>
 <body>
     <div id="content">
+        <header>
         <nav>
-        <div class="menu" id="menu-bar">
-            <a href="../index.html">Home</a>
-            <a href="staff.html">Staff</a>
-        </div>
+            <div class="menu" id="menu-bar">
+                <div class="menu-content">
+                    <a href="../index.html">Home</a>
+                    <a href="staff.html">Staff</a>
+                    <a id="winder-link" href="winder.html">Winder here</a>
+                    <a id="form-link" href="form.html">Questionaire</a>
+                    <a id="admin-corner" href="admin.html">Admin Corner</a>
+                </div>
+                <div class="buttonStuffNav">
+                    <a id="login-link" href="login.html">Login</a>
+                    <a id="logout-link" href="../index.html">Logout</a>
+                </div>
+            </div>
         </nav>
-        <h1> Hier kommt noch ein Form rein zum beantworten</h1>
+        </header>
+
+    <div class="main-content, smooch-sans-cool">
+    <div class="textBox">
+        <h2>Mentee registration</h2>
     </div>
+
+    <div class="form-container">
+        <form id="userForm">
+            <input type="hidden" id="username_hidden" name="submittedBy" value="Gast">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Profession</label>
+                <select id="profession" name="profession">
+                    <option value="high school student">High school student</option>
+                    <option value="university student">Student</option>
+                    <option value="apprentice">Apprentice</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="institution">Name of school / university / company</label>
+                <input type="text" id="institution" name="institution" required>
+            </div>
+
+            <div class="form-group">
+                <label for="helpArea">What can we help you with?</label>
+                <select id="helpArea" name="helpArea" required>
+                    <option value="CV">CV</option>
+                    <option value="Interview preparation">Interview preparation</option>
+                    <option value="Job Market">Job Market</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Have you already gained work experience?</label>
+                <input type="radio" name="experience" value="yes" id="exp-yes"> <label style="display:inline; font-size:1.2rem;" for="exp-yes">Yes</label>
+                <input type="radio" name="experience" value="no" id="exp-no"> <label style="display:inline; font-size:1.2rem;" for="exp-no">No</label>
+            </div>
+
+            <div class="form-group">
+                <label for="fav1">First choice:</label>
+                <select id="fav1" name="fav1" required>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Finances">Finances</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Project Management">Project Management</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fav2">Second choice:</label>
+                <select id="fav2" name="fav2" required>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Finances">Finances</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Project Management">Project Management</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="remarks">Questions / Remarks</label>
+                <textarea id="remarks" name="remarks" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Save Data</button>
+        </form>
+        <div id="successMessage" class="success-msg">Data saved successfully!</div>
+    </div>
+    </div>
+    <script src="../JS/formScript.js"></script>
 </body>
 </html>

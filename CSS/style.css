@@ -1,6 +1,6 @@
 /* // <weight>: Use a value from 100 to 900
 // <uniquifier>: Use a unique and descriptive class name */
-@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
 
 .smooch-sans-cool {
   font-family: "Smooch Sans", sans-serif;
@@ -9,12 +9,12 @@
   font-style: normal;
 }
 
-body{
-    font-family: "Smooch Sans", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    justify-content: center;
+body {
+  font-family: "Smooch Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  justify-content: center;
 }
 
 /* a {
@@ -22,230 +22,409 @@ body{
     color: #000;
 } */
 
-header{
-    position: relative;
-    margin: 0 auto;
-    height: 7.5em;
+header {
+  position: relative;
+  margin: 0 auto;
+  height: 7.5em;
 }
 
-nav{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-nav a{
-    text-decoration: none;
-    color: #fff;
-    padding: 1vw 1vw;
-    display: inline-block;
-    font-size: 1.6vw;
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1vw 1vw;
+  display: inline-block;
+  font-size: 1.6vw;
 }
 
 nav a:hover {
-    background-color: #b29784;
-    /*6b7460*/
-    font-size: 1.7vw;
-    transition: all 0.1s ease;
+  background-color: #b29784;
+  /*6b7460*/
+  font-size: 1.7vw;
+  transition: all 0.1s ease;
 }
 
-#menu-bar{
-    background-color: #6b7460;
-    /*b29784*/
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    height: 11vh;
-    width: 100%;
-    position: absolute;
-    text-transform: capitalize;
-    /* margin-bottom: 10%; */
-    bottom: 0;
+#menu-bar {
+  background-color: #6b7460;
+  /*b29784*/
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  height: 11vh;
+  width: 100%;
+  position: absolute;
+  text-transform: capitalize;
+  /* margin-bottom: 10%; */
+  bottom: 0;
 }
 
 .hero-section {
-    position: relative;
+  position: relative;
 }
 
-.hero-section h1{
-    position: absolute;
-    font-size: clamp(20px, 8vw, 10vw);
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5%;
-    max-width: 60%;
-    color: #6b7460;
+.hero-section h1 {
+  position: absolute;
+  font-size: clamp(20px, 8vw, 10vw);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  max-width: 60%;
+  color: #6b7460;
 }
 
-.hero-section p{
-    position: absolute;
-    font-size: clamp(10px, 4vw, 6vw);
-    top: 50%;
-    transform: translateY(-50%);
-    left: 5%;
-    max-width: 40%;
-    color: #6b7460;
-    margin-top: 25%;
+.hero-section p {
+  position: absolute;
+  font-size: clamp(10px, 4vw, 6vw);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+  max-width: 40%;
+  color: #6b7460;
+  margin-top: 25%;
 }
-.hero-image{
-    width: 100%;
-    height: 50%;
-    position: relative;
-    display: block;
-    overflow: hidden;
+.hero-image {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
 #hero-banner {
-    width: 100%;
-    height: auto;
-    position: relative;
-    display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
 }
 
 .main-content {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .main-content h2 {
-    font-size: 290%;
-    position: relative;
-    text-align: center;
-    padding-top: 12.5%;
+  font-size: 290%;
+  position: relative;
+  text-align: center;
+  padding-top: 12.5%;
 }
 
 .main-content p {
-    font-size: 250%;
-    padding-top: 10%;
-    width: 50%;
-    text-align: left;
-    position: relative;
-    display: block;
-    left: 10%;
+  font-size: 250%;
+  padding-top: 10%;
+  width: 50%;
+  text-align: left;
+  position: relative;
+  display: block;
+  left: 10%;
 }
 
-.buttonStuff button{
-    border-radius: 300px;
-    height: 10%;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin: 10px 0;
-    overflow-wrap: break-word;
-    size: 50%;
-    text-align: center;
-    display: inline-block;
-    font-size: 150%;
+.buttonStuff button {
+  border-radius: 300px;
+  height: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin: 10px 0;
+  overflow-wrap: break-word;
+  size: 50%;
+  text-align: center;
+  display: inline-block;
+  font-size: 150%;
 }
 
-.buttonStuff button:hover{
-    cursor: pointer;
-    background: grey;
+.buttonStuff button:hover {
+  cursor: pointer;
+  background: grey;
 }
 
 .buttonStuff {
-    width: fit-content;
-    display: inline-block;
-    margin-left: 30%;
-    margin-top: 2.5%;
+  width: fit-content;
+  display: inline-block;
+  margin-left: 30%;
+  margin-top: 2.5%;
 }
 
 .buttonStuffNav {
-    width: 10vw;
-    display: inline-flex;
-    margin-right: 0 auto;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 0.809vw;
-    max-height: fit-content;
+  width: 10vw;
+  display: inline-flex;
+  margin-right: 0 auto;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 0.809vw;
+  max-height: fit-content;
 }
 
-button a{
-    text-decoration: none;
-    color: #000;
+button a {
+  text-decoration: none;
+  color: #000;
 }
 .menu-content {
-    width: 80vw;
-    margin-left: 0 auto;
-    display: inline-flex;
+  width: 80vw;
+  margin-left: 0 auto;
+  display: inline-flex;
 }
 
 .boxes {
-    background-color: #6b7460;
+  background-color: #6b7460;
 }
 
 footer {
-    background-color: #6b7460;
-    font-size: large;
+  background-color: #6b7460;
+  font-size: large;
 }
 
 #mentorBoxes {
-    margin-top: 10%;
+  margin-top: 10%;
 }
 
 /* Container für alle Boxen */
 .boxes {
-    display: flex;
-    flex-wrap: wrap; /* Zeilenumbruch bei kleinen Bildschirmen */
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
 }
 
 /* Die einzelne Box */
 .box {
-    background: #f9f9f9;
-    border-radius: 12px;
-    overflow: hidden; /* Damit das Bild oben die Ecken nicht überlagert */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 300px; /* Feste Breite pro Box */
-    transition: transform 0.3s ease;
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Feste Breite pro Box */
+  transition: transform 0.3s ease;
 }
 
 .box:hover {
-    transform: translateY(-5px); /* Kleiner Hover-Effekt */
+  transform: translateY(-5px);
 }
 
 /* Stil für die Bilder */
 .box img {
-    width: 100%;
-    max-height: fit-content;
-    object-fit: cover; /* Bild wird passend zugeschnitten statt verzerrt */
+  width: 100%;
+  max-height: fit-content;
+  object-fit: cover;
 }
 
 /* Textbereich in der Box */
 .box-content {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .box-content h3 {
-    margin: 0 0 10px 0;
-    font-family: 'Smooch Sans', sans-serif;
-    font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 1.5rem;
 }
 
 .box-content p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.4;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
 }
 
 #logout-link {
-    display: none;
+  display: none;
 }
 
 .textBox {
-    width: 100vw;
-    text-align: center;
+  width: 100vw;
+  text-align: center;
 }
 
 .textBox h2 {
-    font-size: 250%;
-    position: relative;
-    text-align: center;
-    padding-top: 5%;
+  font-size: 250%;
+  position: relative;
+  text-align: center;
+  padding-top: 5%;
 }
 
 .textBox a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+/* Spezifische Styles für das Formular, passend zu deinem Design */
+.form-container {
+  max-width: 600px;
+  margin: 5% auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #6b7460;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+}
+
+.submit-btn {
+  background-color: #6b7460;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 300px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b29784;
+}
+
+.success-msg {
+  display: none;
+  color: #6b7460;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.admin-container {
+  width: 90%;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif; /* Für bessere Lesbarkeit in Tabellen */
+}
+
+th {
+  background-color: #6b7460;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 1.5rem;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-btn {
+  background-color: #b29784;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #8c7667;
+}
+
+.stats-bar {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #6b7460;
+}
+
+#form-link {
+  display: none;
+}
+
+#admin-corner {
+  display: none;
+}
+
+.checklist-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .check-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .check-item input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+            cursor: pointer;
+            accent-color: #6b7460;
+        }
+
+        .check-item label {
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: #333;
+            flex-grow: 1;
+        }
+
+        .check-item input:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .progress-container {
+            margin-bottom: 20px;
+            background: #eee;
+            border-radius: 10px;
+            height: 10px;
+        }
+
+        #progress-bar {
+            background: #6b7460;
+            height: 100%;
+            width: 0%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }

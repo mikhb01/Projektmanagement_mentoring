@@ -9,14 +9,32 @@ if (currentUser && currentUser.length > 0) {
     console.log("Signed In User:", user.username);
     document.getElementById('login-link').style.display = 'none'; // Login-Link ausblenden
     document.getElementById('logout-link').style.display = 'inline'; // Logout-Link anzeigen
+    document.getElementById('form-link').style.display = 'inline'; // Form-Link anzeigen
 
+    const isAdmin = user.username.toLowerCase() === 'admin';
+        const adminLink = document.getElementById('admin-corner');
+
+        if (isAdmin) {
+            console.log("User is Admin.");
+            if (adminLink) adminLink.style.display = 'inline'; // Admin-Link im Menü anzeigen
+        } else {
+            // SICHERHEIT: Wenn ein Nicht-Admin auf der admin.html landet, sofort umleiten
+            if (window.location.pathname.includes('admin.html')) {
+                alert("Zugriff verweigert! Nur für Admins.");
+                window.location.href = '../index.html';
+            }
+        }
+    
     const mentors = JSON.parse(localStorage.getItem('mentorUsers')) || [];
     const isMentor = mentors.some(m => m.username === user.username);
 
     if (isMentor) {
         console.log("User is a mentor.");
         document.getElementById('winder-link').style.display = 'none'; // Mentor-Link anzeigen
-    }
+        document.getElementById('form-link').style.display = 'none'; // Questionaire-Link ausblenden
+        }
+    
+
 }
 
     // --- MENTOR SWIPING LOGIK ---
