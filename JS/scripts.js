@@ -163,6 +163,8 @@ if (currentUser && currentUser.length > 0) {
             alert("You have been logged out.");
             if (window.location.pathname.endsWith('index.html')) {
                 window.location.reload();
+            } else if (window.location.pathname.includes('mentors/')) {
+                window.location.href = '../../index.html';
             } else {
                 window.location.href = '../index.html';
             }
