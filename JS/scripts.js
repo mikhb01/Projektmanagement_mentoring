@@ -10,6 +10,8 @@ if (currentUser && currentUser.length > 0) {
     document.getElementById('login-link').style.display = 'none'; // Login-Link ausblenden
     document.getElementById('logout-link').style.display = 'inline'; // Logout-Link anzeigen
     document.getElementById('form-link').style.display = 'inline'; // Form-Link anzeigen
+    document.getElementById('winder-link').style.display = `inline`; // Winder-Link anzeigen
+    document.getElementsByClassName('actions').style.display = 'inline'; // Actions anzeigen
 
     const isAdmin = user.username.toLowerCase() === 'admin';
         const adminLink = document.getElementById('admin-corner');

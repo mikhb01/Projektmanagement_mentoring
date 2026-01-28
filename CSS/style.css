@@ -229,6 +229,14 @@ button a {
   display: none;
 }
 
+#winder-link {
+  display: none;
+}
+
+.actions {
+  display: none;
+}
+
 /* Text Box Styles */
 
 .textBox {

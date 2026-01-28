@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // if (mentor3) {
     //     mentor3.addEventListener('click', () => {
     //         alert("Du hast Julia Weber ausgewählt!");
-    //     });
+    //     }); 
     // }
 
     if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('Projektmanagement_mentoring/')) {

@@ -21,31 +21,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const row = document.createElement('tr');
                     row.innerHTML = `
-                        <td><strong>${data.submittedBy || 'Gast'}</strong></td>
+                        <td><strong>${data.submittedBy || 'Guest'}</strong></td>
                         <td>${data.name || '-'}</td>
                         <td>${data.email || '-'}</td>
                         <td>${data.age || '-'}</td>
                         <td>${data.profession || '-'}</td>
                         <td>${data.fav1 || '-'}</td>
                         <td>${new Date(data.timestamp).toLocaleString('de-DE')}</td>
-                        <td><button class="delete-btn" onclick="deleteEntry('${key}')">Löschen</button></td>
+                        <td><button class="delete-btn" onclick="deleteEntry('${key}')">Delete</button></td>
                     `;
                     tableBody.appendChild(row);
                 } catch (e) {
-                    console.error("Fehler beim Laden von Key: " + key, e);
+                    console.error("Error loading key: " + key, e);
                 }
             }
         }
 
-        stats.innerText = `Anzahl der Einträge: ${count}`;
+        stats.innerText = `Number of entries: ${count}`;
         
         if (count === 0) {
-            tableBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">Keine Einträge gefunden.</td></tr>';
+            tableBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">No entries found.</td></tr>';
         }
     }
 
     function deleteEntry(key) {
-        if (confirm('Diesen Eintrag wirklich löschen?')) {
+        if (confirm('Delete this entry?')) {
             localStorage.removeItem(key);
             renderTable(); // Tabelle neu zeichnen
         }
