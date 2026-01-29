@@ -103,6 +103,10 @@ header h1 {
     gap: 10px;
 }
 
+#contactsStuff {
+    display: none;
+}
+
 button {
     padding: 12px;
     border: none;

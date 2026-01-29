@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (activeUserRaw) {
     try {
       const userData = JSON.parse(activeUserRaw);
-      let username = "Gast";
+      let username = "Guest";
       let userEmail = "";
 
       // Testing: is it an array?
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const jsonData = JSON.stringify(data);
 
         // create unique key
-        const userRef = data.submittedBy || "Gast";
+        const userRef = data.submittedBy || "Guest";
         const storageKey = `survey_${userRef}_${Date.now()}`;
 
         // SAVE to LocalStorage

@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         let storageKey = null;
         if (username) {
             storageKey = `checklist_data_${username}`;
-            if (headerTitle) headerTitle.innerText = `Checkliste für ${username}: Dein Fortschritt wird gespeichert.`;
+            if (headerTitle) headerTitle.innerText = `Checkliste for ${username}: Your progress is saved.`;
         } else {
-            if (headerTitle) headerTitle.innerText = "Gast-Modus: Deine Häkchen werden nicht dauerhaft gespeichert.";
+            if (headerTitle) headerTitle.innerText = "Guest Mode: Your checkboxes are not permanently saved.";
         }
 
         // 2. Daten laden (nur wenn eingeloggt)
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 status[cb.id] = cb.checked;
             });
             localStorage.setItem(storageKey, JSON.stringify(status));
-            console.log("Gespeichert für " + username);
+            console.log("Saved for " + username);
         }
 
         function updateProgress() {

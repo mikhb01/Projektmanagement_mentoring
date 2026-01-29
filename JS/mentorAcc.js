@@ -36,7 +36,7 @@ if (currentUser) {
             
             // Kleiner Zusatz: Check ob Nutzername schon existiert
             if (mentorUsers.some(u => u.username === mentorUser)) {
-                alert("Benutzername schon vergeben!");
+                alert("Username is already taken!");
                 return;
             }
 

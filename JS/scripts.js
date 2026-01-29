@@ -5,13 +5,17 @@ const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
 if (currentUser && currentUser.length > 0) {
     const user = currentUser[0];
+    const contactElem = document.getElementById('contactsStuff');
 
     console.log("Signed In User:", user.username);
     document.getElementById('login-link').style.display = 'none'; // Login-Link ausblenden
     document.getElementById('logout-link').style.display = 'inline'; // Logout-Link anzeigen
     document.getElementById('form-link').style.display = 'inline'; // Form-Link anzeigen
-    document.getElementById('winder-link').style.display = `inline`; // Winder-Link anzeigen
-    document.getElementsByClassName('actions').style.display = 'inline'; // Actions anzeigen
+    document.getElementById('winder-link').style.display = 'inline'; // Winder-Link anzeigen
+    
+    if (contactElem){
+        contactElem.style.display = 'flex'; // Kontakt-Buttons auf Mentorenseiten anzeigen
+    }
 
     const isAdmin = user.username.toLowerCase() === 'admin';
         const adminLink = document.getElementById('admin-corner');
